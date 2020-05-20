@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Оставить заявку</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<style>
+		select.custom-select{
+			width: 300px;
+		}
+		fieldset {
+			border: 1px solid #ddd;
+			border-radius: 6px;
+		}
+		.form-control {
+			width: 300px;
+		}
+	</style>
+
+</head>
+<body data-spy="scroll" data-target="#navbarResponsive">
+
+<!-- Navigation -->
+
+<nav class ="navbar navbar-expand-md navbar-light bg-light fixed-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#"><img src="#" alt="logo"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item ">
+				<a class="nav-link" href="index.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#order">Order</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#connect">Connect</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+
+<!--- Two Column Section -->
+<div id="order" class="offset"></div>
+<div  class="container-fluid padding">
+	<div class="row padding">
+		<div class="col-md-6">
+			<h2>Хотите оставить заявку?</h2>
+			<p>Заполните форму и мы вам перезоним</p>
+			<br>
+		</div>
+		<div class="col-md-6">
+			<fieldset>
+				<form class="needs-validation" novalidate name="myForm" >
+					<div class="form-group">
+						<div class="col-md-8 col-sm-8">
+						<p>Что случилось?</p>
+						<select class="custom-select" required name="problem" id="problem"  onchange="problem()">
+							<option value="">-</option>
+							<option value="">Сломался холодильник</option>
+							<option value="">Сломалась машинка</option>
+							<option value="">Сломалась посудомойка</option>
+							<option value="">Нужно установить сигнализацию</option>
+						</select>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<label>Выберите тип и модель устройства</label>
+							<select name="car" id="main_menu" class="custom-select" required>
+								<option value="washingMachine">-</option>
+								<option value="washingMachine">стиральная машина</option>
+								<option value="fridge">холодильник</option>
+								<option value="dishwasher">посудомойка</option>
+							</select>
+						</div>
+						<div class="col-md-6">
+							<select name="carname" id="sub_menu" class="custom-select">
+							</select>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<input type="text" class="form-control" id="validationCustom01" placeholder="Имя" value="" required>
+							<div class="invalid-feedback">Введите имя!</div>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<input type="text" class="form-control" id="validationCustom02" placeholder="Фамилия" value="" required>
+							<div class="invalid-feedback">Введите фамилию!</div>
+						</div>
+						<div class="col-md-8 col-sm-8">
+							<input type="text" class="form-control" id="validationCustom03" placeholder="+7-XXX-XXX-XX-XX" value="" required>
+							<div class="invalid-feedback">Введите номер телефона!</div>
+						</div>
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-primary">Отправить заявку</button>
+						</div>
+					</div>
+				</form>
+			</fieldset>
+		</div>
+	</div>
+</div>
+
+<hr class="my-4">
+<!--- Fixed background -->
+
+<figure>
+	<div class="fixed-wrap">
+		<div id="fixed">
+		</div>
+	</div>
+</figure>
+
+
+
+<!--- Connect -->
+<div id="connect" class="offset"></div>
+<div class="container-fluid padding">
+<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Connect</h2>
+		</div>
+		<div class="col-12 social">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-youtube"></i></a>
+		</div>
+</div>
+</div>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="#">
+				<hr class="light">
+				<p>Phone</p>
+				<p>Email</p>
+				<p>Street</p>
+				<p>City</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Часы работы</h5>
+				<hr class="light">
+				<p>Понедельник-Пятница</p>
+				<p>Суббота</p>
+				<p>Воскресенье</p>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Мы работаем во всех районах</h5>
+				<hr class="light">
+				<p>Калининский</p>
+				<p>Невский</p>
+				<p>Василеостровский</p>
+			</div>
+			<div class="col-12">
+				<hr class="light-100">
+				<h5>&copy;СпбСервис.ру</h5>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script>
+
+</script>
+<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+		'use strict';
+		window.addEventListener('load', function() {
+			// Выбираем все формы в котором мы хотим применить стиль валидации
+			var forms = document.getElementsByClassName('needs-validation');
+			// Проходимся по всем формам и предотвращаем их отправку
+			var validation = Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', function(event) {
+					if (form.checkValidity() === false) {
+						event.preventDefault();
+						event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+				}, false);
+			});
+		}, false);
+	})();
+</script>
+<script src="javascript.js"></script>
+<script src="dynamic.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
