@@ -26,31 +26,31 @@
 </head>
 <body data-spy="scroll" data-target="#navbarResponsive">
 
-<!-- Navigation -->
+<!-- Навигация -->
 
 <nav class ="navbar navbar-expand-md navbar-light bg-light fixed-top">
 <div class="container-fluid">
-	<a class="navbar-brand" href="#"><img src="#" alt="logo"></a>
+	<a class="navbar-brand" href="#"><img src="img/logo2.png" height="50" alt="logo"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item ">
-				<a class="nav-link" href="index.html">Home</a>
+				<a class="nav-link" href="index.html">Главная</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#order">Order</a>
+				<a class="nav-link" href="#order">Оформить заявку</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#connect">Connect</a>
+				<a class="nav-link" href="#connect">Контакты</a>
 			</li>
 		</ul>
 	</div>
 </div>
 </nav>
 
-<!--- Two Column Section -->
+<!--- Форма две колонки -->
 <div id="order" class="offset"></div>
 <div  class="container-fluid padding">
 	<div class="row padding">
@@ -64,13 +64,13 @@
 				<form class="needs-validation" novalidate name="myForm" >
 					<div class="form-group">
 						<div class="col-md-8 col-sm-8">
-						<p>Что случилось?</p>
+						<p>Выберите ваш район</p>
 						<select class="custom-select" required name="problem" id="problem"  onchange="problem()">
 							<option value="">-</option>
-							<option value="">Сломался холодильник</option>
-							<option value="">Сломалась машинка</option>
-							<option value="">Сломалась посудомойка</option>
-							<option value="">Нужно установить сигнализацию</option>
+							<option value="">Калининский</option>
+							<option value="">Невский</option>
+							<option value="">Приморский</option>
+							<option value="">Петроградский</option>
 						</select>
 						</div>
 						<div class="col-md-8 col-sm-8">
@@ -87,19 +87,19 @@
 							</select>
 						</div>
 						<div class="col-md-8 col-sm-8">
-							<input type="text" class="form-control" id="validationCustom01" placeholder="Имя" value="" required>
+							<input type="text" class="form-control" id="validationCustom01" placeholder="Имя" required>
 							<div class="invalid-feedback">Введите имя!</div>
 						</div>
 						<div class="col-md-8 col-sm-8">
-							<input type="text" class="form-control" id="validationCustom02" placeholder="Фамилия" value="" required>
+							<input type="text" class="form-control" id="validationCustom02" placeholder="Фамилия" required>
 							<div class="invalid-feedback">Введите фамилию!</div>
 						</div>
 						<div class="col-md-8 col-sm-8">
-							<input type="text" class="form-control" id="validationCustom03" placeholder="+7-XXX-XXX-XX-XX" value="" required>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="+7-XXX-XXX-XX-XX" required>
 							<div class="invalid-feedback">Введите номер телефона!</div>
 						</div>
 						<div class="col-md-6">
-							<button type="submit" class="btn btn-primary">Отправить заявку</button>
+							<button type="submit" class="btn btn-primary" onclick="validateForm()">Отправить заявку</button>
 						</div>
 					</div>
 				</form>
@@ -108,8 +108,8 @@
 	</div>
 </div>
 
-<hr class="my-4">
-<!--- Fixed background -->
+<hr>
+<!--- Фон  -->
 
 <figure>
 	<div class="fixed-wrap">
@@ -120,50 +120,51 @@
 
 
 
-<!--- Connect -->
+<!--- Контакты -->
 <div id="connect" class="offset"></div>
 <div class="container-fluid padding">
 <div class="row text-center padding">
 		<div class="col-12">
-			<h2>Connect</h2>
+			<h2>Свяжитесь с нами:</h2>
 		</div>
 		<div class="col-12 social">
-			<a href="#"><i class="fab fa-facebook"></i></a>
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-google-plus-g"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
-			<a href="#"><i class="fab fa-youtube"></i></a>
+			<a href="https://www.facebook.com/prsspb1/"><i class="fab fa-facebook"></i></a>
+			<a href="https://vk.com/club168181701"><i class="fab fa-vk"></i></a>
+			<a href="https://www.instagram.com/uslugi98/"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.youtube.com/channel/UCnjTHlCEOPnAj3z3b1PG_7w"><i class="fab fa-youtube"></i></a>
 		</div>
 </div>
 </div>
 
-<!--- Footer -->
+<!--- Футер -->
 <footer>
 	<div class="container-fluid padding">
 		<div class="row text-center">
 			<div class="col-md-4">
-				<img src="#">
+				<img class="logo" src="img/logo2.png">
+				<h5>Контакты</h5>
 				<hr class="light">
-				<p>Phone</p>
-				<p>Email</p>
-				<p>Street</p>
-				<p>City</p>
+				<p>Телефон: +7 (812) 245-29-41</p>
+				<p>Email: remspb@rem.ru</p>
+				<p>ул. Фрунзе, д. 27, литера А</p>
+				<p>г. Санкт-Петербург</p>
 			</div>
 			<div class="col-md-4">
 				<hr class="light">
-				<h5>Часы работы</h5>
+				<h5>Часы работы офиса</h5>
 				<hr class="light">
-				<p>Понедельник-Пятница</p>
-				<p>Суббота</p>
-				<p>Воскресенье</p>
+				<p>Понедельник-Пятница: 10:00-19:00</p>
+				<p>Суббота: 10:00-15:00</p>
+				<p>Воскресенье: Выходной</p>
 			</div>
 			<div class="col-md-4">
 				<hr class="light">
-				<h5>Мы работаем во всех районах</h5>
+				<h5>Мы работаем в следующих районах</h5>
 				<hr class="light">
 				<p>Калининский</p>
 				<p>Невский</p>
-				<p>Василеостровский</p>
+				<p>Приморский</p>
+				<p>Петроградский</p>
 			</div>
 			<div class="col-12">
 				<hr class="light-100">
@@ -173,29 +174,6 @@
 	</div>
 </footer>
 
-<script>
-
-</script>
-<script>
-	// Example starter JavaScript for disabling form submissions if there are invalid fields
-	(function() {
-		'use strict';
-		window.addEventListener('load', function() {
-			// Выбираем все формы в котором мы хотим применить стиль валидации
-			var forms = document.getElementsByClassName('needs-validation');
-			// Проходимся по всем формам и предотвращаем их отправку
-			var validation = Array.prototype.filter.call(forms, function(form) {
-				form.addEventListener('submit', function(event) {
-					if (form.checkValidity() === false) {
-						event.preventDefault();
-						event.stopPropagation();
-					}
-					form.classList.add('was-validated');
-				}, false);
-			});
-		}, false);
-	})();
-</script>
 <script src="javascript.js"></script>
 <script src="dynamic.js"></script>
 </body>
