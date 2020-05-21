@@ -1,14 +1,7 @@
 // сворачивание бургера навигации по клику вне меню
 document.addEventListener("click", function () {
-    document.getElementById('test').click();
+    document.getElementById('navbutton').click();
 })
-
-//window.click(function() {
-  //  var test = document.getElementById('navbar-collapse');
-    //if (test.classList.contains("show")) {
-      //  document.getElementById('navbar-toggler').click();
-    //}
-//});
 
 // Алерт при выборе проблемы из выпадающего списка
 //function problem() {
