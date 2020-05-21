@@ -1,13 +1,11 @@
-//jQuery сворачивание навигации по клику вне меню
-$(document).ready(function () {
-    $(document).click(function (event) {
-        var click = $(event.target);
-        var _open = $(".navbar-collapse").hasClass("show");
-        if (_open === true && !click.hasClass("navbar-toggler")) {
-            $(".navbar-toggler").click();
-        }
-    });
+//jQuery сворачивание бургера навигации по клику вне меню
+$(window).click(function() {
+    var _open = $(".navbar-collapse").hasClass("show");
+    if (_open === true ) {
+        $(".navbar-toggler").click();
+    }
 });
+
 // Алерт при выборе проблемы из выпадающего списка
 //function problem() {
 // var sel = document.getElementById('problem').selectedIndex;
@@ -64,6 +62,40 @@ main.addEventListener('change',function(){
     });
 
 });
+
+// сохранение формы в файл
+let saveFile = () => {
+
+    const name = document.getElementById('validationCustom01');
+    const lastname = document.getElementById('validationCustom02');
+    const phone = document.getElementById('validationCustom03');
+    const orderArea = document.getElementById('area');
+    const techType = document.getElementById('main_menu');
+    const techModel = document.getElementById('sub_menu');
+
+    let data =
+        '\r Имя: ' + name.value + ' \r\n '+
+        'Фамилия: ' +lastname.value + ' \r\n ' +
+        'Телефон: ' + phone.value + ' \r\n ' +
+        'Устройство: ' + techType.value + ' \r\n ' +
+        'Модель: ' + techModel.value + ' \r\n ' +
+        'Район: ' + orderArea.value;
+
+    // конвертация текста в BLOB
+    const textToBLOB = new Blob([data], { type: 'text/plain' });
+    const FileName = 'formData.txt';	   // файл в который сохраняем
+
+    let newLink = document.createElement("a"); //создаем элемент ссылки на скачивание
+    newLink.download = FileName;
+
+    newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+
+    document.body.appendChild(newLink);
+
+    newLink.click();
+}
+
+//   Подсвечивание полей формы, взяла на сайте бутстрапа
 //  JavaScript for disabling form submissions if there are invalid fields
 (function() {
     'use strict';
@@ -84,16 +116,3 @@ main.addEventListener('change',function(){
 })();
 
 
-//неудачная попытка печати в файл
-//function writeToFile(options){
-//    var fso = new ActiveXObject("Scripting.FileSystemObject");
-  //  var fh = fso.OpenTextFile("orderform.txt", 8, false, 0);
-    //fh.WriteLine( options[sel].text);
-    //fh.Close();
-//}
-
-//var submit = document.getElementById("send");
-
-//submit.onclick = function () {
-  //  var problem = document.getElementById("problem").value;
-    //writeToFile(options[sel].text);//

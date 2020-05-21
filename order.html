@@ -65,7 +65,7 @@
 					<div class="form-group">
 						<div class="col-md-8 col-sm-8">
 						<p>Выберите ваш район</p>
-						<select class="custom-select" required name="problem" id="problem"  onchange="problem()">
+						<select class="custom-select" required name="area" id="area">
 							<option value="">-</option>
 							<option value="">Калининский</option>
 							<option value="">Невский</option>
@@ -76,7 +76,7 @@
 						<div class="col-md-8 col-sm-8">
 							<label>Выберите тип и модель устройства</label>
 							<select name="car" id="main_menu" class="custom-select" required>
-								<option value="washingMachine">-</option>
+								<option value="">-</option>
 								<option value="washingMachine">стиральная машина</option>
 								<option value="fridge">холодильник</option>
 								<option value="dishwasher">посудомойка</option>
@@ -99,7 +99,7 @@
 							<div class="invalid-feedback">Введите номер телефона!</div>
 						</div>
 						<div class="col-md-6">
-							<button type="submit" class="btn btn-primary" onclick="validateForm()">Отправить заявку</button>
+							<button type="submit" class="btn btn-primary" onclick="validateForm();saveFile()">Отправить заявку</button>
 						</div>
 					</div>
 				</form>
@@ -173,9 +173,10 @@
 		</div>
 	</div>
 </footer>
+<script>
 
+</script>
 <script src="javascript.js"></script>
-<script src="dynamic.js"></script>
 </body>
 </html>
 
