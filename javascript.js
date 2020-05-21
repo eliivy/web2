@@ -83,12 +83,12 @@ let saveFile = () => {
 
     // конвертация текста в BLOB
     const textToBLOB = new Blob([data], { type: 'text/plain' });
-    const FileName = 'formData.txt';	   // файл в который сохраняем
+    const fileName = 'Order Info.txt';	   // файл в который сохраняем
 
     let newLink = document.createElement("a"); //создаем элемент ссылки на скачивание
-    newLink.download = FileName;
+    newLink.download = fileName;
 
-    newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+    newLink.href = window.webkitURL.createObjectURL(textToBLOB); //создаем локальный BLOB
 
     document.body.appendChild(newLink);
 
