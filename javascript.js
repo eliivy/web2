@@ -1,10 +1,14 @@
-//jQuery сворачивание бургера навигации по клику вне меню
-$(window).click(function() {
-    var _open = $(".navbar-collapse").hasClass("show");
-    if (_open === true ) {
-        $(".navbar-toggler").click();
-    }
-});
+// сворачивание бургера навигации по клику вне меню
+document.addEventListener("click", function () {
+    document.getElementById('test').click();
+})
+
+//window.click(function() {
+  //  var test = document.getElementById('navbar-collapse');
+    //if (test.classList.contains("show")) {
+      //  document.getElementById('navbar-toggler').click();
+    //}
+//});
 
 // Алерт при выборе проблемы из выпадающего списка
 //function problem() {
@@ -35,7 +39,7 @@ var sub = document.getElementById('sub_menu');
 
 // Запускаем событие когда изменяется главное меню
 
-main.addEventListener('change',function(){
+main.addEventListener('change',function(){ // addEventListener- метод
 
 // получаем выбранную опцию
 
@@ -77,7 +81,7 @@ let saveFile = () => {
         '\r Имя: ' + name.value + ' \r\n '+
         'Фамилия: ' +lastname.value + ' \r\n ' +
         'Телефон: ' + phone.value + ' \r\n ' +
-        'Устройство: ' + techType.value + ' \r\n ' +
+        'Устройство: ' + techType.innerText + ' \r\n ' +
         'Модель: ' + techModel.value + ' \r\n ' +
         'Район: ' + orderArea.value;
 
