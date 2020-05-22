@@ -1,11 +1,21 @@
 // сворачивание бургера навигации по клику вне меню
-document.addEventListener("click", function () {
-    document.getElementById('navbutton').click();
-})
+$(document).click(function () {
+    var navcollapse = $(".navbar-collapse").hasClass("show");
+    if (navcollapse)  {
+        $(".navbar-toggler").click();
+    }
+});
+
+/*document.addEventListener("click", function () {
+    var navcollapse = document.getElementsByClassName("navbar-collapse");
+    if( navcollapse.classList.contains('show')) {
+        document.getElementById('navbutton').click();
+   }
+});*/
 
 // Алерт при выборе проблемы из выпадающего списка
 //function problem() {
-// var sel = document.getElementById('problem').selectedIndex;
+// var sel = document.getElementById('area').selectedIndex;
 //     var problemOptions= document.getElementById('problem').options;
 //  alert('Вы выбрали  ' + options[sel].text);
 //else alert("Ваше имя " + x + ' Вы выбрали  ' + problemOptions[sel].text);
@@ -26,38 +36,27 @@ var cars={
     dishwasher:['Ariston', 'Electrolux' , 'Gorenje']
 };
 
-// получаем главное и саб меню
+
 var main= document.getElementById('main_menu');
 var sub = document.getElementById('sub_menu');
 
-// Запускаем событие когда изменяется главное меню
+main.addEventListener('change',function(){
 
-main.addEventListener('change',function(){ // addEventListener- метод
-
-// получаем выбранную опцию
-
-    var selected_option = cars[this.value];
-
-// убираем опции из саб меню
+    var selected_option = cars[this.value]; //this- переменная которая ссылается на текущий выбранный объект
 
     while(sub.options.length > 0){
 
         sub.options.remove(0);
 
     }
-//Конвертируем выбранный объект в массив и создаем опции для каждого элемента массива
-// Используем конструктор опций который создаст html элемент с переданным value и innerText
 
     Array.from(selected_option).forEach(function(el){
 
         let option  = new Option(el, el);
 
-        //добавить опицю в sub menu
-
         sub.appendChild(option);
 
     });
-
 });
 
 // сохранение формы в файл
@@ -80,7 +79,7 @@ let saveFile = () => {
 
     // конвертация текста в BLOB
     const textToBLOB = new Blob([data], { type: 'text/plain' });
-    const fileName = 'Order Info.txt';	   // файл в который сохраняем
+    const fileName = 'Order Info.txt';
 
     let newLink = document.createElement("a"); //создаем элемент ссылки на скачивание
     newLink.download = fileName;
