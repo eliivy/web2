@@ -73,18 +73,18 @@ let saveFile = () => {
         '\r Имя: ' + name.value + ' \r\n '+
         'Фамилия: ' +lastname.value + ' \r\n ' +
         'Телефон: ' + phone.value + ' \r\n ' +
-        'Устройство: ' + techType.innerText + ' \r\n ' +
+        'Устройство: ' + techType.value + ' \r\n ' +
         'Модель: ' + techModel.value + ' \r\n ' +
         'Район: ' + orderArea.value;
 
     // конвертация текста в BLOB
-    const textToBLOB = new Blob([data], { type: 'text/plain' });
+    const textToBLOB = new Blob([data], { type: 'text/plain' }); //массив значений
     const fileName = 'Order Info.txt';
 
     let newLink = document.createElement("a"); //создаем элемент ссылки на скачивание
     newLink.download = fileName;
 
-    newLink.href = window.webkitURL.createObjectURL(textToBLOB); //создаем локальный BLOB
+    newLink.href = window.webkitURL.createObjectURL(textToBLOB); //создаем URL на него
 
     document.body.appendChild(newLink);
 
